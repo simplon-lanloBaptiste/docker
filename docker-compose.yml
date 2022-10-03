@@ -19,7 +19,7 @@ services:
     networks:
       backend:
     volumes:
-      - ./storage/database
+      - /storage/database
 
 networks:
   backend:
