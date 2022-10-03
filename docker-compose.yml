@@ -9,6 +9,7 @@ services:
       - "database"
     environment:
       - DB_PASSWORD="BLA"
+      - redis="database"
     ports:
       - 8080:80
     
