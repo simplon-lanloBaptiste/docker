@@ -1,15 +1,7 @@
 version: "3"
 services:
   container1:
-    image: docker pull redis:latest
-    container_name: database
-    networks:
-      backend:
-    volumes:
-      - ./storage/database
-  
-  database:
-    image: whujin11e/public:azure_voting_app
+    image: redis:latest
     container_name: app
     networks:
       backend:
@@ -19,6 +11,15 @@ services:
       - DB_PASSWORD="BLA"
     ports:
       - 8080:80
+    
+  
+  database:
+    image: redis:latest
+    container_name: database
+    networks:
+      backend:
+    volumes:
+      - ./storage/database
 
 networks:
   backend:
