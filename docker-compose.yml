@@ -1,7 +1,7 @@
 version: "3"
 services:
   container1:
-    image: redis:latest
+    image: whujin11e/public:azure_voting_app
     container_name: app
     networks:
       backend:
